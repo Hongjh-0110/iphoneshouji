@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--新项目部署注意！！！
+href="static/plugin/bootstrap/css/bootstrap.css
+-->
+<head>
+    <title>首页</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="static/plugin/bootstrap/css/bootstrap.css">
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://www.w3schools.cn/lib/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+<!--导航栏-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+    <a class="navbar-brand mb-0 h1" href="#" style="font-family:微软雅黑;font-weight: bolder;color: black">
+        <img src="/flag.jpg" width="45" height="30" class="d-inline-block align-top" alt="">
+        巴基斯坦新闻小站
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">首页 <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">关于我们</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                    推荐
+                </a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">文化</a>
+                    <a class="dropdown-item" href="#">历史</a>
+                    <a class="dropdown-item" href="#">国际</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">联系我们</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" style="font-family:微软雅黑;font-weight: bolder;color: black">
+                    安分守己组
+                </a>
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class=" btn btn-sm btn-outline-success my-2 my-sm-0" type="submit" style="margin-right: 10px;">
+                <svg class="bi bi-search" width="20px" height="20px" viewBox="0 0 16 16" fill="currentColor"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z"/>
+                    <path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"/>
+                </svg>
+            </button>
+        </form>
+        <div class="form-inline my-2 my-lg-0">
+            <button class="btn btn-sm btn-outline-secondary" type="button" style="margin-right: 10px;">
+                登录
+            </button>
+            <button class="btn btn-sm btn-outline-secondary" type="button">
+                注册
+            </button>
+        </div>
+    </div>
+</nav>
+<!--滚动大新闻-->
+<div id="carouselExampleCaptions" class="mb-4 container carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+        <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <a href="#">
+                <img src="static/images/abc.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>
+                        新闻标题
+                    </h5>
+                    <p>
+                        All my girls vintage Chanel baby. So you can have your cake. Tonight, tonight, tonight, I'm
+                        walking on air.
+                        Slowly swallowing down my fear, yeah yeah. Growing fast into a bolt of lightning. So hot and
+                        heavy, 'Til dawn. That fairy tale ending with a knight in shining armor. Heavy is the head that
+                        wears the crown.
+                    </p>
+                </div>
+            </a>
+        </div>
+        <div class="carousel-item">
+            <a href="#">
+                <img src="static/images/abc.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>
+                        新闻标题
+                    </h5>
+                    <p>
+                        新闻内容
+                    </p>
+                </div>
+            </a>
+        </div>
+        <div class="carousel-item">
+            <a href="#">
+                <img src="static/images/abc.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>
+                        新闻标题
+                    </h5>
+                    <p>
+                        新闻内容
+                    </p>
+                </div>
+            </a>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-target="#carouselExampleCaptions" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-target="#carouselExampleCaptions" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </button>
+</div>
+<!--排版左中右-->
+<div class="container-fluid clearfix">
+    <div class="row">
+        <!--排版左-->
+        <div class="col-md-4">
+            <ul class="list-unstyled">
+                <li class="mb-4 card">
+                    <div class="row no-gutters">
+                        <div class="col-md-4 d-flex align-items-center justify-content-center">
+                            <img src="static/images/abc.jpg" class="img-fluid" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title" style="font-weight: bold">
+                                    新闻标题
+                                </h5>
+                                <p class="card-text">
+                                    This is a wider card with supporting text below as a natural lead-in
+                                    to additional content. This content is a little bit longer.
+                                </p>
+                                <a href="#" class="card-text"><small class="text-muted">More>>></small></a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="mb-4 card">
+                    <div class="row no-gutters">
+                        <div class="col-md-4 d-flex align-items-center justify-content-center">
+                            <img src="static/images/abc.jpg" class="img-fluid" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title" style="font-weight: bold">
+                                    新闻标题
+                                </h5>
+                                <p class="card-text">
+                                    This is a wider card with supporting text below as a natural lead-in
+                                    to additional content. This content is a little bit longer.
+                                </p>
+                                <a href="#" class="card-text"><small class="text-muted">More>>></small></a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="mb-4 card">
+                    <div class="row no-gutters">
+                        <div class="col-md-4 d-flex align-items-center justify-content-center">
+                            <img src="static/images/abc.jpg" class="img-fluid" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title" style="font-weight: bold">
+                                    新闻标题
+                                </h5>
+                                <p class="card-text">
+                                    This is a wider card with supporting text below as a natural lead-in
+                                    to additional content. This content is a little bit longer.
+                                </p>
+                                <a href="#" class="card-text"><small class="text-muted">More>>></small></a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!--排版中-->
+        <div class="col-md-4">
+            <ul class="list-unstyled">
+                <li class="mb-4 card">
+                    <div class="row no-gutters">
+                        <div class="col-md-4 d-flex align-items-center justify-content-center">
+                            <img src="static/images/abc.jpg" class="img-fluid" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title" style="font-weight: bold">
+                                    新闻标题
+                                </h5>
+                                <p class="card-text">
+                                    This is a wider card with supporting text below as a natural lead-in
+                                    to additional content. This content is a little bit longer.
+                                </p>
+                                <a href="#" class="card-text"><small class="text-muted">More>>></small></a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="mb-4 card">
+                    <div class="row no-gutters">
+                        <div class="col-md-4 d-flex align-items-center justify-content-center">
+                            <img src="static/images/abc.jpg" class="img-fluid" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title" style="font-weight: bold">
+                                    新闻标题
+                                </h5>
+                                <p class="card-text">
+                                    This is a wider card with supporting text below as a natural lead-in
+                                    to additional content. This content is a little bit longer.
+                                </p>
+                                <a href="#" class="card-text"><small class="text-muted">More>>></small></a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="mb-4 card">
+                    <div class="row no-gutters">
+                        <div class="col-md-4 d-flex align-items-center justify-content-center">
+                            <img src="static/images/abc.jpg" class="img-fluid" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title" style="font-weight: bold">
+                                    新闻标题
+                                </h5>
+                                <p class="card-text">
+                                    This is a wider card with supporting text below as a natural lead-in
+                                    to additional content. This content is a little bit longer.
+                                </p>
+                                <a href="#" class="card-text"><small class="text-muted">More>>></small></a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!--排版右-->
+        <div class="col-md-4">
+            <ul class="list-unstyled">
+                <li class="mb-4 card">
+                    <div class="row no-gutters">
+                        <div class="col-md-4 d-flex align-items-center justify-content-center">
+                            <img src="static/images/abc.jpg" class="img-fluid" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title" style="font-weight: bold">
+                                    新闻标题
+                                </h5>
+                                <p class="card-text">
+                                    This is a wider card with supporting text below as a natural lead-in
+                                    to additional content. This content is a little bit longer.
+                                </p>
+                                <a href="#" class="card-text"><small class="text-muted">More>>></small></a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="mb-4 card">
+                    <div class="row no-gutters">
+                        <div class="col-md-4 d-flex align-items-center justify-content-center">
+                            <img src="static/images/abc.jpg" class="img-fluid" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title" style="font-weight: bold">
+                                    新闻标题
+                                </h5>
+                                <p class="card-text">
+                                    This is a wider card with supporting text below as a natural lead-in
+                                    to additional content. This content is a little bit longer.
+                                </p>
+                                <a href="#" class="card-text"><small class="text-muted">More>>></small></a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="mb-4 card">
+                    <div class="row no-gutters">
+                        <div class="col-md-4 d-flex align-items-center justify-content-center">
+                            <img src="static/images/abc.jpg" class="img-fluid" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title" style="font-weight: bold">
+                                    新闻标题
+                                </h5>
+                                <p class="card-text">
+                                    This is a wider card with supporting text below as a natural lead-in
+                                    to additional content. This content is a little bit longer.
+                                </p>
+                                <a href="#" class="card-text"><small class="text-muted">More>>></small></a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!--
+                <div class="col-md-3">
+                    <div class="card">
+                        <h5 class="card-header">热门新闻</h4>
+                            <div class="card-body">
+                                <h4 class="card-title"></h4>
+                                <p class="card-text">
+                                    超级热门的新闻balabala
+                                </p>
+                                <a href="#" class="btn btn-primary">
+                                    More
+                                </a>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        -->
+        <!--跳转页面：暂时用不着-->
+        <!--
+        <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-center">
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        -->
+        <!--灰色栏-->
+        <div class="jumbotron jumbotron-fluid"
+             style="width: 100%;background-color: #0b2e13;opacity: 0.8;margin:200px 0 0 0;border-top: 2px solid #0b2e13">
+            <div class="container text-center" style="font-weight: bold; color: #ffffff">
+                <h1 class="display-4 mb-4">巴基斯坦新闻小站</h1>
+                <p class="lead">
+                    本网站所刊载信息，不代表网站所有人观点。
+                </p>
+                <ul class="list-inline">
+                    <li class="list-inline-item">
+                        <a class="lead text-light" href="#">首页</a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="lead text-light" href="#">文化</a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="lead text-light" href="#">历史</a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="lead text-light" href="#">国际</a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="lead text-light" href="#">联系我们</a>
+                    </li>
+                </ul>
+                <p class="lead" style="font-weight: lighter; ">
+                    兰州大学23秋Python程序设计班 安分守己组
+                </p>
+                <p class="lead" style="font-weight: lighter; ">
+                    张宇豪 洪佳慧 萧大蒙
+                </p>
+            </div>
+        </div>
+</body>
+</html>
