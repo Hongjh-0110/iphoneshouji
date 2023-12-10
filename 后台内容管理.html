@@ -17,7 +17,7 @@ href="static/plugin/bootstrap/css/bootstrap.css
 <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
     <a class="navbar-brand mb-0 h1" href="#"
        style="font-size: 1.5rem;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;font-family:微软雅黑;font-weight: bolder;color: black">
-        <img src="/flag.jpg" width="45" height="30" class="d-inline-block align-top" alt="">
+        <img src="static/images/flag.jpg" width="45" height="30" class="d-inline-block align-top" alt="">
         巴基斯坦新闻小站
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -84,30 +84,50 @@ href="static/plugin/bootstrap/css/bootstrap.css
                     <th scope="col">操作</th>
                 </tr>
                 </thead>
-                <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>News</td>
-                    <td>
-                        <a class="btn btn-primary btn-sm">编辑</a>
-                        <a class="btn btn-danger btn-sm">删除</a>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>Admin</td>
-                    <td>News</td>
-                    <td>
-                        <a class="btn btn-primary btn-sm">编辑</a>
-                        <a class="btn btn-danger btn-sm">删除</a>
-                    </td>
-                </tr>
+                <tbody id="body_management">
+
                 </tbody>
             </table>
         </div>
     </div>
 </div>
+<!--JavaScript函数用于查看数据库用户文章（目前是读取全部）-->
+<!--articlelist-->
+<script type="text/javascript">
+    /*articlelist从数据库读取*/
+    var articlelist = [
+        { id: 1, name: "LiHua1", title: "巴基斯坦好兄弟1" },
+        { id: 2, name: "LiHua2", title: "巴基斯坦好兄弟2" },
+        { id: 3, name: "LiHua3", title: "巴基斯坦好兄弟3" },
+        { id: 4, name: "LiHua4", title: "巴基斯坦好兄弟4" },
+        { id: 5, name: "LiHua5", title: "巴基斯坦好兄弟5" }
+    ];
+    for (var idx in articlelist) {
+        var info = articlelist[idx];
+        var tr = document.createElement("tr");
+
+        // Use id as row number within <th scope="row">
+        var th = document.createElement('th');
+        th.setAttribute('scope', 'row');
+        th.innerText = info.id;
+        tr.appendChild(th);
+
+        for (var key in info) {
+            if (key !== 'id') { // Exclude id from regular columns
+                var text = info[key];
+                var td = document.createElement('td');
+                td.innerText = text;
+                tr.appendChild(td);
+            }
+        }
+        var td = document.createElement('td');
+        td.innerHTML = ' <a class="btn btn-primary btn-sm">编辑</a> <a class="btn btn-danger btn-sm">删除</a>';
+        tr.appendChild(td);
+        var bodyTag = document.getElementById("body_management");
+        bodyTag.appendChild(tr);
+    }
+</script>
+
 <!--跳转页面-->
 <nav aria-label="Page navigation example">
     <ul class="pagination justify-content-center">
