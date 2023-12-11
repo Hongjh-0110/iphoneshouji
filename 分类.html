@@ -121,52 +121,82 @@ href="static/plugin/bootstrap/css/bootstrap.css
             href: "#",
             article: "This is a wider card with supporting text below as a natural lead-into additional content. This content is a little bit longer."
         },
+        {
+            id: 6,
+            imgsrc: 'static/images/b.jpg',
+            title: "新闻标题6",
+            href: "#",
+            article: "This is a wider card with supporting text below as a natural lead-into additional content. This content is a little bit longer."
+        },
     ];
-    function createNewsCard(news) {
-        var li = document.createElement("li");
-        li.className = "mb-4 card";
+
+    for (var idx = 0; idx < culturalNews.length; idx += 2) { // Increment by 2
         var rowDiv = document.createElement("div");
-        rowDiv.className = "row no-gutters";
-        var colDiv1 = document.createElement("div");
-        colDiv1.className = "col-md-4 d-flex align-items-center justify-content-center";
-        var img = document.createElement("img");
-        img.src = news.imgsrc;
-        img.className = "img-fluid";
-        img.alt = "News Image";
-        colDiv1.appendChild(img);
-        var colDiv2 = document.createElement("div");
-        colDiv2.className = "col-md-8";
-        var cardBody = document.createElement("div");
-        cardBody.className = "card-body";
-        var title = document.createElement("h5");
-        title.className = "card-title";
-        title.style.fontWeight = "bold";
-        title.innerText = news.title;
-        var text = document.createElement("p");
-        text.className = "card-text";
-        text.innerText = news.article;
-        var link = document.createElement("a");
-        link.href = news.href;
-        link.className = "card-text";
-        link.innerHTML = '<small class="text-muted">More>>></small>';
-        cardBody.appendChild(title);
-        cardBody.appendChild(text);
-        cardBody.appendChild(link);
-        colDiv2.appendChild(cardBody);
-        rowDiv.appendChild(colDiv1);
-        rowDiv.appendChild(colDiv2);
-        li.appendChild(rowDiv);
-        return li;
+        rowDiv.classList.add("row");
+
+        for (var i = 0; i < 2 && (idx + i) < culturalNews.length; i++) { // Display two columns
+            var info = culturalNews[idx + i];
+
+            var colDiv = document.createElement("div");
+            colDiv.classList.add("col-md-6"); // Adjust column size
+
+            var cardLi = document.createElement("li");
+            cardLi.classList.add("mb-4", "card");
+
+            var cardRowDiv = document.createElement("div");
+            cardRowDiv.classList.add("row", "no-gutters");
+
+            var imgColDiv = document.createElement("div");
+            imgColDiv.classList.add("col-md-4", "d-flex", "align-items-center", "justify-content-center");
+
+            var imgElement = document.createElement("img");
+            imgElement.src = info.imgsrc;
+            imgElement.classList.add("img-fluid");
+            imgElement.alt = "News Image";
+
+            imgColDiv.appendChild(imgElement);
+
+            var textColDiv = document.createElement("div");
+            textColDiv.classList.add("col-md-8");
+
+            var cardBodyDiv = document.createElement("div");
+            cardBodyDiv.classList.add("card-body");
+
+            var titleElement = document.createElement("h5");
+            titleElement.classList.add("card-title", "font-weight-bold");
+            titleElement.innerText = info.title;
+
+            var articleElement = document.createElement("p");
+            articleElement.classList.add("card-text");
+            articleElement.innerText = info.article;
+
+            var linkElement = document.createElement("a");
+            linkElement.href = info.href;
+            linkElement.classList.add("card-text");
+
+            var smallElement = document.createElement("small");
+            smallElement.classList.add("text-muted");
+            smallElement.innerText = "More >>>";
+
+            linkElement.appendChild(smallElement);
+
+            cardBodyDiv.appendChild(titleElement);
+            cardBodyDiv.appendChild(articleElement);
+            cardBodyDiv.appendChild(linkElement);
+
+            textColDiv.appendChild(cardBodyDiv);
+
+            cardRowDiv.appendChild(imgColDiv);
+            cardRowDiv.appendChild(textColDiv);
+
+            cardLi.appendChild(cardRowDiv);
+            colDiv.appendChild(cardLi);
+            rowDiv.appendChild(colDiv);
+        }
+        var newspart = document.getElementById("culturalNewsList");
+        newspart.appendChild(rowDiv);
     }
-
-    // 将文化新闻插入到列表中
-    var culturalNewsList = document.getElementById("culturalNewsList");
-    culturalNews.forEach(function (newsItem) {
-        var newsCard = createNewsCard(newsItem);
-        culturalNewsList.appendChild(newsCard);
-    });
 </script>
-
 
 <!--跳转页面-->
 <nav aria-label="Page navigation example">

@@ -4,7 +4,7 @@
 href="static/plugin/bootstrap/css/bootstrap.css
 -->
 <head>
-    <title>注册</title>
+    <title>内容编辑</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="static/plugin/bootstrap/css/bootstrap.css">
@@ -12,18 +12,18 @@ href="static/plugin/bootstrap/css/bootstrap.css
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://www.w3schools.cn/lib/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <style>
-        .account {
+        .edit {
             border: 1px solid #dddddd;
             border-radius: 5px;
             box-shadow: 5px 5px 20px #aaa;
-            max-width: 400px;
+            max-width: 800px;
             margin-left: auto;
             margin-right: auto;
             margin-top: 100px;
             padding: 20px 40px;
         }
 
-        .account h2 {
+        .edit h2 {
             margin-top: 10px;
             text-align: center;
         }
@@ -78,28 +78,33 @@ href="static/plugin/bootstrap/css/bootstrap.css
         </div>
     </div>
 </nav>
-<!--注册-->
-<div class="account container">
-    <h2>用户注册</h2>
-    <form id="registrationForm">
+<!--管理-->
+<div class="container edit">
+    <h2>内容编辑</h2>
+    <form>
         <div class="form-group">
-            <label for="username">用户名</label>
-            <input type="text" class="form-control" id="username" placeholder="用户名" required>
+            <label for="exampleFormControlInput1">文章标题</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="标题">
         </div>
         <div class="form-group">
-            <label for="email">邮箱</label>
-            <input type="email" class="form-control" id="email" placeholder="邮箱" required>
+            <label for="exampleFormControlSelect1">文章分类</label>
+            <select class="form-control" id="exampleFormControlSelect1">
+                <option>文化</option>
+                <option>历史</option>
+                <option>国际</option>
+            </select>
         </div>
         <div class="form-group">
-            <label for="password">密码</label>
-            <input type="password" class="form-control" id="password" placeholder="密码" required>
+            <label for="exampleFormControlTextarea1">文章内容</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="15" placeholder="balabala"></textarea>
         </div>
         <div class="form-group">
-            <label for="confirmPassword">重复密码</label>
-            <input type="password" class="form-control" id="confirmPassword" placeholder="重复密码" required>
+            <label for="exampleFormControlFile1">选择图片：</label>
+            <input type="file" class="form-control-file" id="exampleFormControlFile1" name="imageUpload"
+                   accept="image/jpeg, image/png">
         </div>
         <div class="d-flex justify-content-end">
-            <input type="submit" value="注 册" class="btn btn-primary">
+            <input type="submit" value="提 交" class="btn btn-primary">
         </div>
     </form>
 </div>
@@ -136,42 +141,6 @@ href="static/plugin/bootstrap/css/bootstrap.css
         </p>
     </div>
 </div>
-<script>
-    document.getElementById('registrationForm').addEventListener('submit', function (event) {
-        // 阻止默认的表单提交行为
-        event.preventDefault();
-        // 获取表单字段的值
-        var username = document.getElementById('username').value;
-        var email = document.getElementById('email').value;
-        var password = document.getElementById('password').value;
-        var confirmPassword = document.getElementById('confirmPassword').value;
-        // 在这里可以添加密码匹配的验证逻辑
-        if (password !== confirmPassword) {
-            alert('密码和重复密码不匹配，请重新输入。');
-            return;
-        }
-        // 在这里可以将表单数据提交到后端处理
-        // 例如，使用 AJAX 请求将数据发送到服务器
-        // 以下是一个示例：
-        // var formData = new FormData();
-        // formData.append('username', username);
-        // formData.append('email', email);
-        // formData.append('password', password);
-        // formData.append('confirmPassword', confirmPassword);
 
-        // fetch('/register', {
-        //     method: 'POST',
-        //     body: formData
-        // })
-        // .then(response => response.json())
-        // .then(data => {
-        //     // 处理服务器响应
-        //     console.log(data);
-        // })
-        // .catch(error => {
-        //     console.error('Error:', error);
-        // });
-    });
-</script>
 </body>
-</html>
+</
